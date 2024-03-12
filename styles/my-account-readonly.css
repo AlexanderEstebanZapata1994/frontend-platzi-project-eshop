@@ -17,7 +17,7 @@ body {
     margin: 0;
 }
 
-.login {
+.container {
     height: 100vh;
     width: 100%;
     display: grid;
@@ -26,20 +26,22 @@ body {
 
 .form-container {
     display: grid;
-    grid-template-rows: auto 1fr auto;
+    grid-template-rows: auto 1fr;
     width: 300px;
     height: 90vh;
 }
 
-.logo {
-    width: 200px;
-    margin: 30px auto;
-    display: none;
+.title {
+    font-weight: bolder;
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 2fr 6fr;
+}
+
+.form div {
+    display: grid;
     row-gap: 5px;
 }
 
@@ -49,16 +51,13 @@ body {
     font-size: var(--sm);
 }
 
-.input {
-    border: none;
-    border-radius: 8px;
-    background-color: var(--text-input-field);
-    height: 30px;
-    padding: 5px;
+.value {
+    color: var(--very-light-pink);
+    font-size: var(--lg);
 }
 
-.button {
-    border:none;
+.button  {
+    border: none;
     margin-top: 30px;
     border-radius: 8px;
     height: 48px;
@@ -70,21 +69,6 @@ body {
     color: var(--white);
 }
 
-.primary-button {
-    background-color: var(--hospital-green);
-    color: var(--white);
-}
-
-.form a {
-    text-decoration: none;
-    font-size: var(--sm);
-    color: var(--hospital-green);
-    font-weight: 500;
-    margin-top: 20px;
-    text-align: center;
-}
-
-
 .secondary-button {
     border: solid 2px var(--hospital-green);
     background-color: white;
@@ -92,9 +76,30 @@ body {
     font-weight: 500;
 }
 
+@media (max-width: 640px) {
+    .form {
+        row-gap: 300px;
+    }
+}
 
-@media (max-width: 350px ) {
-    .logo {
-        display: block;
+@media (max-height: 740px) {
+    .form {
+        row-gap: 10px;
+    }
+}
+
+@media (max-width: 440px) {
+    .form-container {
+        width: 250px;
+    }
+}
+
+@media (max-width: 280px) {
+    .form-container {
+        width: 150px;
+    }
+
+    .title {
+        font-size: medium;
     }
 }
