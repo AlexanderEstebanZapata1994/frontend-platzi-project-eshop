@@ -1,0 +1,115 @@
+:root {
+    --very-light-pink: #C7C7C7;
+    --white: #fff;
+    --black: 000000;
+    --text-input-field: #f7f7f7;
+    --hospital-green: #ACD9B2;
+    --hospital-green-hover: #7b997f;
+    --dark: #232830;
+
+    --sm: 14px;
+    --md: 16px;
+    --lg: 18px;
+}
+
+body {
+    font-family: "Quicksand", sans-serif;
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.home-container{
+    width: 400px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+}
+
+header .search  {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+header .search i {
+    position: absolute;
+}
+
+.icon  {
+    padding: 10px;
+    color: green;
+    min-width: 50px;
+    text-align: center;
+}
+
+header .search input {
+    width: 100%;
+    height: 40px;
+    padding: 0 20px 0 40px;
+    background-color: var(--text-input-field);
+    border-radius: 8px;
+    border: none;
+    color: var(--very-light-pink);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 163px);
+    row-gap: 10px;
+}
+
+.item {
+    padding: 8px;
+    border-radius: 8px;
+    margin: 8px;
+}
+
+.item img {
+    max-height: 163px;
+    max-width: 100%;
+    border-radius: 16px;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.item-info-section {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+}
+
+.item-info-section span:nth-child(1) {
+    font-size: var(--md);
+    font-weight: 700;
+}
+
+.item-info-section span:nth-child(2) {
+    color: rgba(128, 128, 128, 0.699);
+    font-size: var(--md);
+    font-weight: lighter;
+    overflow-wrap: break-word;
+    text-wrap: wrap;
+}
+
+.add-to-cart-button {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+}
